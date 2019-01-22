@@ -35,7 +35,7 @@
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-bs-yoF">
                                         <rect key="frame" x="45" y="268" width="285" height="45"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.38823529410000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="KoS-mM-yGg"/>
                                         </constraints>
@@ -45,19 +45,19 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTS-BU-r6b">
                                         <rect key="frame" x="45" y="321" width="285" height="45"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.80784313725490198" green="0.38823529411764707" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="yjY-Ym-0Mk"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmE-qU-yLw">
-                                        <rect key="frame" x="97.5" y="401" width="180" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="87.5" y="401" width="200" height="40"/>
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.38823529410000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="VEx-rR-7UN"/>
+                                            <constraint firstAttribute="width" constant="200" id="VEx-rR-7UN"/>
                                             <constraint firstAttribute="height" constant="40" id="VZF-Sn-gmx"/>
                                         </constraints>
                                         <state key="normal" title="LOGIN">
@@ -194,7 +194,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="PM0-DJ-dTS"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="etX-mW-jbx"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

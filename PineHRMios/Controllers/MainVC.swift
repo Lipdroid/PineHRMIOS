@@ -67,7 +67,7 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     }
     @IBAction func profile_pressed(_ sender: Any) {
         toggleLeftMenu()
-        let item = ItemObject(name: "Profile", icon: "icon_tax",url:"https://www.pinehrm.com/cna/client/employee/profile/accesstoken/   ")
+        let item = ItemObject(name: "Profile", icon: "icon_tax",url:"https://www.pinehrm.com/cna/client/employee/profile/accesstoken/")
         performSegue(withIdentifier: "itemDetails", sender: item)
     }
     @IBAction func transparent_view_touched(_ sender: Any) {
@@ -191,7 +191,7 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat =  20
+        let padding: CGFloat =  10
         let collectionViewSize = collectionView.frame.size.width - padding
         
         return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
