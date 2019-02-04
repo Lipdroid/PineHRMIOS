@@ -187,19 +187,17 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PaySlip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S37-GT-Bgf">
-                                                            <rect key="frame" x="-8" y="96" width="150" height="40"/>
+                                                            <rect key="frame" x="-8" y="96" width="150" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="150" id="4Sc-SX-pL7"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9yb-2e-wQI"/>
-                                                                <constraint firstAttribute="height" constant="40" id="PM0-DJ-dTS"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="etX-mW-jbx"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.63137254899999995" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="S37-GT-Bgf" firstAttribute="centerX" secondItem="1kT-Ou-hki" secondAttribute="centerX" id="2HU-Q1-ByT"/>
                                                         <constraint firstItem="S37-GT-Bgf" firstAttribute="top" secondItem="T6H-fx-6JL" secondAttribute="bottom" constant="5" id="7jb-1M-Lbd"/>
@@ -461,9 +459,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app_logo" width="1061" height="1061"/>
+        <image name="app_logo" width="453" height="926"/>
         <image name="btn_back" width="100" height="100"/>
-        <image name="icon_payslip" width="100" height="100"/>
+        <image name="icon_payslip" width="57" height="41"/>
         <image name="left_drawer_icon" width="100" height="100"/>
         <image name="logout_icon" width="100" height="100"/>
         <image name="profile_icon" width="100" height="100"/>

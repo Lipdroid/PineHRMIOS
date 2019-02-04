@@ -194,6 +194,6 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
         let padding: CGFloat =  10
         let collectionViewSize = collectionView.frame.size.width - padding
         
-        return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+        return CGSize(width: collectionViewSize/2, height: self.collectionView.frame.height/4.2)
     }
 }
