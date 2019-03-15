@@ -162,7 +162,7 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
         go_to_login_page()
     }
     func go_to_login_page(){
-        //
+        dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: Constants.MAINVC_TO_LOGINVIEW, sender: nil)
     }
     

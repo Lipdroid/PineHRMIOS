@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("AppDelegate: Already logged in")
             go_to_main_page()
         }else{
-            go_to_login_page()
+            go_to_timeline_page()
         }
         return true
     }
@@ -32,10 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }
-    private func go_to_login_page(){
+    
+    private func go_to_timeline_page(){
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TimelineVC") as? TimelineVC
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }

@@ -16,6 +16,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var et_password: UITextField!
     @IBOutlet weak var btn_login: UIButton!
 
+    @IBAction func btn_back_pressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let myColor = UIColor.white
@@ -35,8 +38,8 @@ class LoginVC: UIViewController {
         et_password.attributedPlaceholder = NSAttributedString(string: "Password",
                                                             attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         //for test
-        et_email.text = "salman.khan@canda.com"
-        et_password.text = "hello"
+       // et_email.text = "salman.khan@canda.com"
+       // et_password.text = "hello"
     }
 
     @IBAction func login_pressed(_ sender: Any) {
@@ -77,17 +80,22 @@ class LoginVC: UIViewController {
                                     KeychainWrapper.standard.set(accesstoken, forKey: Constants.KEY_TOKEN)
                                     KeychainWrapper.standard.set(name, forKey: Constants.KEY_NAME)
                                     KeychainWrapper.standard.set(email, forKey: Constants.KEY_EMAIL)
+                                    self.go_to_main_page()
                                 }
                             }
                         }catch {
                             print(error.localizedDescription)
-                            
+                            let alert = UIAlertController(title: "Error", message: "Error message:\(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
-                        self.go_to_main_page()
                     }
                     
                 case .failure(_):
                     print("Error message:\(response.result.error)")
+                    let alert = UIAlertController(title: "Error", message: "Error message:\(response.result.error)", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                     break
                 }
         }

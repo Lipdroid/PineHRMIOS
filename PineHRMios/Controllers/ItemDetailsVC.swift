@@ -9,14 +9,16 @@
 import UIKit
 import SwiftKeychainWrapper
 
-class ItemDetailsVC: UIViewController {
+class ItemDetailsVC: UIViewController, UIWebViewDelegate {
     var item: ItemObject!
     @IBOutlet weak var title_lbl: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet var loadSpinner: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title_lbl.text = item.name
+        webView.delegate = self
         // Do any additional setup after loading the view.
         if let accesstoken = KeychainWrapper.standard.string(forKey: Constants.KEY_TOKEN){
             webView.loadRequest(URLRequest(url: URL(string: item.url + accesstoken)!))
@@ -33,6 +35,16 @@ class ItemDetailsVC: UIViewController {
 
     @IBAction func btn_back_pressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func webViewDidStartLoad(_ : UIWebView) {
+        loadSpinner.startAnimating()
+        loadSpinner.isHidden = false;
+    }
+    
+    func webViewDidFinishLoad(_ : UIWebView) {
+        loadSpinner.stopAnimating()
+        loadSpinner.isHidden = true;
     }
 
 }
